@@ -3,14 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace _7_FootballplayerHierarchy
 {
-    class Footballplayer : Sportsman
+    [Serializable]
+    
+    public class Footballplayer : Sportsman
     {
-        public string Team { get; private set; }
-        public int Number { get; private set; }
+        [XmlElement]
+        public string Team { get; set; }
+        [XmlElement]
+        public int Number { get;  set; }
 
+        public Footballplayer() { }
         public Footballplayer(string name, int skill, string team, int number) : base(name, skill)
         {
             Team = team;
@@ -18,7 +24,9 @@ namespace _7_FootballplayerHierarchy
             
         }
 
-
-
+        public override string ToString()
+        {
+            return "Player " + Name + ", skill: " + Skill + ", team: " + Team + ", Number: " + Number;
+        }
     }
 }

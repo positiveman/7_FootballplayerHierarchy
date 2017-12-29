@@ -3,17 +3,25 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace _7_FootballplayerHierarchy
 {
-    class Sportsman
+
+    [Serializable]
+    [XmlInclude(typeof(Sportsman))]
+    [XmlInclude(typeof(Footballplayer))]
+    [XmlInclude(typeof(Goalkeeper))]
+
+    public class Sportsman
     {
+        [XmlElement]
+        public string Name { get;  set; }
 
-        public string Name { get; private set; }
 
-        
-
-        public int Skill { get; protected set; }
+        [XmlElement]
+        public int Skill { get;  set; }
+        public Sportsman() { }
 
         public Sportsman(string name, int skill)
         {
@@ -25,6 +33,11 @@ namespace _7_FootballplayerHierarchy
         {
             Skill++;
             Console.WriteLine("Skill of {0} is {1}", Name, Skill);
+        }
+
+        public override string ToString()
+        {
+            return "Sportsman " + Name + ", skill: " + Skill;
         }
     }
 }
