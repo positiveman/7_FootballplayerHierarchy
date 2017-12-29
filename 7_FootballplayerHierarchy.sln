@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7_FigureHierarchy", "7_FigureHierarchy\7_FigureHierarchy.csproj", "{A0D78068-FC12-4FEE-9003-FD744B88F4C6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7_FootballplayerHierarchy", "7_FigureHierarchy\7_FootballplayerHierarchy.csproj", "{A0D78068-FC12-4FEE-9003-FD744B88F4C6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
